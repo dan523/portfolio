@@ -1,5 +1,7 @@
 {
   "globalDependencies": {
-    "angular": "registry:dt/angular#1.5.0+20160627105203"
+    "angular": "registry:dt/angular#1.5.0+20160627105203",
+    "angular-animate": "registry:dt/angular-animate#1.5.0+20160624085506",
+    "angular-material": "registry:dt/angular-material#1.0.0-rc5.0+20160627174759"
   }
 }
