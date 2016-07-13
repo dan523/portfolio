@@ -1,0 +1,32 @@
+.symbolLookupRow .cell {
+    margin: 10px;
+    position: absolute;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.symbolLookupRow .left {
+    left: 0px;
+    right: 75%;
+    font-size: 0.9em;
+}
+
+.symbolLookupRow .center {
+    left: 25%;
+    right: 25%;
+    font-size: 0.9em;
+}
+
+.symbolLookupRow .right {
+    left: 75%;
+    right: 0px;
+    text-align: right;
+    font-weight: lighter;
+    font-size: 0.8em;
+    color: grey;
+}
+
+.symbolLookupRow .highlight {
+    font-weight: 800;
+}

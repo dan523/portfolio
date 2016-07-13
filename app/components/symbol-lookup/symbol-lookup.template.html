@@ -1,10 +1,21 @@
-<h2>SymbolLookup</h2>
+<div class="container">
+    <h2>SymbolLookup</h2>
 
-<md-autocomplete 
-        md-selected-item="$ctrl.selectedItem"         
-        md-search-text="$ctrl.searchText" 
-        md-search-text-change="$ctrl.updateMatches($ctrl.searchText)"
-        md-items="item in $ctrl.matches" 
-        md-item-text="item.symbol">
-    <span md-highlight-text="$ctrl.searchText" md-highlight-flags="^i">{{item.symbol}}</span>
-</md-autocomplete>
+    <md-autocomplete 
+            md-selected-item="$ctrl.selectedItem"         
+            md-search-text="$ctrl.searchText" 
+            md-search-text-change="$ctrl.updateMatches($ctrl.searchText)"
+            md-items="item in $ctrl.matches" 
+            md-item-text="item.symbol"
+            md-menu-class="symbolLookupRow">
+        <md-item-template>
+            <span class="cell left" md-highlight-text="$ctrl.searchText" md-highlight-flags="gi">{{item.symbol}}</span>
+            <span class="cell center" md-highlight-text="$ctrl.searchText" md-highlight-flags="gi">{{item.name}}</span>
+            <span class="cell right">{{item.typeDisp}} {{item.exchDisp}}</span>            
+        </md-item-template>
+        <!--TODO: Add proper localization-->
+        <md-not-found>
+            No matches found.
+        </md-not-found>
+    </md-autocomplete>
+</div>
