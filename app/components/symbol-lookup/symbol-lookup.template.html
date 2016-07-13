@@ -4,8 +4,7 @@
     <md-autocomplete 
             md-selected-item="$ctrl.selectedItem"         
             md-search-text="$ctrl.searchText" 
-            md-search-text-change="$ctrl.updateMatches($ctrl.searchText)"
-            md-items="item in $ctrl.matches" 
+            md-items="item in $ctrl.getMatches($ctrl.searchText)" 
             md-item-text="item.symbol"
             md-menu-class="symbolLookupRow">
         <md-item-template>
