@@ -1,5 +1,10 @@
 <h2>SymbolLookup</h2>
 
-<md-autocomplete md-selected-item="$ctrl.selectedItem" md-search-text="$ctrl.searchText" md-items="item in $ctrl.getMatches($ctrl.searchText)" md-item-text="item.display">
-    <span md-highlight-text="$ctrl.searchText">{{item.display}}</span>
+<md-autocomplete 
+        md-selected-item="$ctrl.selectedItem"         
+        md-search-text="$ctrl.searchText" 
+        md-search-text-change="$ctrl.updateMatches($ctrl.searchText)"
+        md-items="item in $ctrl.matches" 
+        md-item-text="item.symbol">
+    <span md-highlight-text="$ctrl.searchText" md-highlight-flags="^i">{{item.symbol}}</span>
 </md-autocomplete>
