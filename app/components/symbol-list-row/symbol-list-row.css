@@ -1,0 +1,30 @@
+symbol-list-row {
+    border-bottom: 1px solid #CCC;
+    padding: 0 16px;
+    width: 100%;
+}
+
+symbol-list-row .left {
+    width: 33%;
+    display: inline-block;
+}
+
+symbol-list-row .middle {
+    width: 33%;
+    text-align: center;
+}
+
+symbol-list-row .symbol {
+    color: #757575;
+    font-weight: 800;
+    font-size: 0.8em;
+}
+
+symbol-list-row .name {
+    font-size: 0.8em;
+}
+
+symbol-list-row .price {
+    font-weight: lighter;
+    font-size: 2em;
+}

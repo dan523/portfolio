@@ -4,6 +4,9 @@
 angular
     .module('symbolListRow')
     .component('symbolListRow', {
+        bindings: {
+            quote: '<'
+        },
         templateUrl: 'components/symbol-list-row/symbol-list-row.template.html',
         controller:
             function SymbolList () {                
