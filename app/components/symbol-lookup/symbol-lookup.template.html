@@ -1,6 +1,7 @@
 <div class="container">
     <md-autocomplete 
             md-selected-item="$ctrl.selectedItem"         
+            md-selected-item-change="$ctrl.selectedItemChanged(item)"
             md-search-text="$ctrl.searchText" 
             md-items="item in $ctrl.getMatches($ctrl.searchText)" 
             md-item-text="item.symbol"

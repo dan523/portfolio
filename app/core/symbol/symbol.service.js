@@ -8,16 +8,14 @@ angular
             var searchUrl = 'https://crossorigin.me/https://s.yimg.com/aq/autoc?lang=en-CA&region=CA&query={0}';
 
             return {
-                query: function (searchString) {
-                    var s
+                /**
+                 * Search for a symbol, returns multiple symbols that match the searchString.
+                 */
+                get: function (searchString) {                    
                     return $http.get(searchUrl.replace('{0}', searchString))
                         .then(function (result) {
                             return result.data.ResultSet.Result;
                         });
-                },
-
-                get: function (symbol) {
-
                 }
             };
         }

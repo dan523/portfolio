@@ -5,13 +5,19 @@ angular
     .module('symbolLookup')
     .component('symbolLookup', {
         templateUrl: 'components/symbol-lookup/symbol-lookup.template.html',
-        controller: ['Symbol',
-            function SymbolLookup (Symbol) {                
+        controller: ['Symbol', 'Quote',
+            function SymbolLookup (Symbol, Quote) {                
                 var self = this;
 
                 self.getMatches = function updateMatches(searchString) {          
-                    return Symbol.query(searchString);       
+                    return Symbol.get(searchString);       
                 };
+
+                self.selectedItemChanged = function selectedItemChanged(item) {
+                    if (item) {
+                        var test = Quote.get([item.symbol]);
+                    }                    
+                }
             }
         ]
     });
