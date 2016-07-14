@@ -1,12 +1,11 @@
 <div class="container">
-    <h2>SymbolLookup</h2>
-
     <md-autocomplete 
             md-selected-item="$ctrl.selectedItem"         
             md-search-text="$ctrl.searchText" 
             md-items="item in $ctrl.getMatches($ctrl.searchText)" 
             md-item-text="item.symbol"
-            md-menu-class="symbolLookupRow">
+            md-menu-class="symbolLookupRow"
+            placeholder="Search for a symbol...">
         <md-item-template>
             <span class="cell left" md-highlight-text="$ctrl.searchText" md-highlight-flags="gi">{{item.symbol}}</span>
             <span class="cell center" md-highlight-text="$ctrl.searchText" md-highlight-flags="gi">{{item.name}}</span>

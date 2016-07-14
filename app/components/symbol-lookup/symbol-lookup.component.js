@@ -9,17 +9,8 @@ angular
             function SymbolLookup (Symbol) {                
                 var self = this;
 
-                self.getMatches = function updateMatches(searchString) {                    
-                    return Symbol.get({
-                                query: searchString,
-                                region: 'CA',   // TODO: Don't hardcode
-                                lang: 'en-CA'   // TODO: Don't hardcode
-                            }
-                        )
-                        .$promise
-                        .then(function (results) {
-                            return results.ResultSet.Result;
-                        });
+                self.getMatches = function updateMatches(searchString) {          
+                    return Symbol.query(searchString);       
                 };
             }
         ]
