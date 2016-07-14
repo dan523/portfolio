@@ -1,0 +1,25 @@
+.portfolio {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.portfolio .title {
+    margin: 50px auto;
+    text-align: center;
+    font-size: 7em;
+    color: #66CCBE;
+    font-weight: bold;
+}
+
+.portfolio .title .dot{
+    color: #666;
+}
+
+.portfolio .container {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: auto;
+}

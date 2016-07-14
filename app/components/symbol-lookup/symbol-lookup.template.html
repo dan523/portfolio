@@ -1,7 +1,7 @@
 <div class="container">
     <md-autocomplete 
             md-selected-item="$ctrl.selectedItem"         
-            md-selected-item-change="$ctrl.selectedItemChanged(item)"
+            md-selected-item-change="$ctrl.onAdd({$event: $ctrl.getSelectedSymbol()})"
             md-search-text="$ctrl.searchText" 
             md-items="item in $ctrl.getMatches($ctrl.searchText)" 
             md-item-text="item.symbol"
@@ -17,5 +17,4 @@
             No matches found.
         </md-not-found>
     </md-autocomplete>
-    <button ng-click="$ctrl.onAdd({$event: $ctrl.getSelectedSymbol()})">Add</button>
 </div>
