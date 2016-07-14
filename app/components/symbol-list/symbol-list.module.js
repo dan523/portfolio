@@ -1,4 +1,4 @@
 /// <reference path="../../../typings/index.d.ts" />
 'use strict';
 
-angular.module('symbolLookup', ['ngMaterial', 'core.symbol']);
+angular.module('symbolList', ['ngMaterial', 'symbolListRow']);

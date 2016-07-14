@@ -1,8 +1,8 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('portfolio', [
+angular.module('app', [
     'ngMaterial',
     'core',
-    'symbolLookup'
+    'portfolio'
     ]);

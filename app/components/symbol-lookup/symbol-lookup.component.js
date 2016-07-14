@@ -4,6 +4,9 @@
 angular
     .module('symbolLookup')
     .component('symbolLookup', {
+        bindings: {
+            onAdd: '&'
+        },
         templateUrl: 'components/symbol-lookup/symbol-lookup.template.html',
         controller: ['Symbol', 'Quote',
             function SymbolLookup (Symbol, Quote) {                
@@ -13,10 +16,8 @@ angular
                     return Symbol.get(searchString);       
                 };
 
-                self.selectedItemChanged = function selectedItemChanged(item) {
-                    if (item) {
-                        var test = Quote.get([item.symbol]);
-                    }                    
+                self.getSelectedSymbol = function getSelectedSymbol() {
+                    return self.selectedItem && self.selectedItem.symbol;
                 }
             }
         ]
