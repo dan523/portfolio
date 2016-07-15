@@ -17,7 +17,7 @@ angular
                 };
 
                 self.getSelectedSymbol = function getSelectedSymbol() {
-                    return self.selectedItem && self.selectedItem.symbol;
+                    return self.selectedItem;
                 }
             }
         ]

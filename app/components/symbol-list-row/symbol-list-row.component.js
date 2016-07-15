@@ -7,9 +7,5 @@ angular
         bindings: {
             quote: '<'
         },
-        templateUrl: 'components/symbol-list-row/symbol-list-row.template.html',
-        controller:
-            function SymbolList () {                
-                
-            }
+        templateUrl: 'components/symbol-list-row/symbol-list-row.template.html'
     });
