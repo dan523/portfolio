@@ -1,5 +1,8 @@
 <div class="left">
     <div class="symbol">{{$ctrl.quote.Symbol}}</div>
-    <div class="name">{{$ctrl.quote.Name}}</div>
+    <div class="name tooltip">
+        {{$ctrl.quote.Name}}
+        <span class="tooltiptext">{{$ctrl.quote.Name}}</span>
+    </div>
 </div>
 <span class="middle price">${{$ctrl.quote.LastTradePriceOnly}}</span>

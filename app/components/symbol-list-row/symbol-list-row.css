@@ -22,6 +22,9 @@ symbol-list-row .symbol {
 
 symbol-list-row .name {
     font-size: 0.8em;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 symbol-list-row .price {

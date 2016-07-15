@@ -2,21 +2,42 @@ body {
     font-family: 'Open Sans';
 }
 
-.portfolio {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-}
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in;
+    -moz-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;    
 
-.portfolio .title {
-    margin: 50px auto;
+    color: #757575;
+    background-color: #FFF;
     text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #CCC;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    top: 40px;
+    left: 16px;
+    z-index: 1;
+    font-size: 0.8em;
 }
 
-.portfolio .container {
-    margin-left: 20%;
-    margin-right: 20%;
-    width: auto;
+/* Display an arrow at the top of the tooltip */
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%; 
+    left: 15px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  transparent transparent #CCC transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
