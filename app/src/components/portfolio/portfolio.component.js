@@ -1,10 +1,10 @@
-/// <reference path="../../../typings/index.d.ts" />
+/// <reference path="../../../../typings/index.d.ts" />
 'use strict';
 
 angular
-    .module('portfolio')
+    .module('portfolio', ['core.quote', 'symbolLookup', 'symbolList'])
     .component('portfolio', {
-        templateUrl: 'components/portfolio/portfolio.template.html',
+        templateUrl: 'src/components/portfolio/portfolio.template.html',
         controller: ['Quote',
             function Portfolio (Quote) {
                 var self = this;

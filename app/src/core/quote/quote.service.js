@@ -1,8 +1,8 @@
-/// <reference path="../../../typings/index.d.ts" />
+/// <reference path="../../../../typings/index.d.ts" />
 'use strict';
 
 angular
-    .module('core.quote')
+    .module('core.quote', [])
     .factory('Quote', function ($http) {
             var yqlGetQuery = 'select * from yahoo.finance.quotes where symbol in ("{0}")'
             var yqlGetFormat = 'json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=JSON_CALLBACK';

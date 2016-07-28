@@ -1,13 +1,13 @@
-/// <reference path="../../../typings/index.d.ts" />
+/// <reference path="../../../../typings/index.d.ts" />
 'use strict';
 
 angular
-    .module('symbolLookup')
+    .module('symbolLookup', ['ngMaterial', 'core.symbol'])
     .component('symbolLookup', {
         bindings: {
             onAdd: '&'
         },
-        templateUrl: 'components/symbol-lookup/symbol-lookup.template.html',
+        templateUrl: 'src/components/symbol-lookup/symbol-lookup.template.html',
         controller: ['Symbol', 'Quote',
             function SymbolLookup (Symbol, Quote) {                
                 var self = this;
