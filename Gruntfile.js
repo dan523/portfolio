@@ -17,11 +17,21 @@ module.exports = function(grunt) {
                     'app/index.html': 'app/index.tpl.html'
                 }
             }
+        },
+        watch: {
+            css: {
+                files: ['app/src/**/*.css'],
+                tasks: ['default']
+            },
+            js: {
+                files: ['app/src/**/*.js'],
+                tasks: ['default']
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-include-source');
-
+    grunt.loadNpmTasks('grunt-contrib-watch');
     // Default task(s).
     grunt.registerTask('default', ['includeSource']);
 };
